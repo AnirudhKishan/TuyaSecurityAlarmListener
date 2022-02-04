@@ -16,7 +16,8 @@ def onEvent(msg):
 	print(data["status"][0]["code"])
 	print(data["status"][0]["value"])
 	if ((data["status"][0]["code"] == "master_mode" and data["status"][0]["value"] == "sos") or (data["status"][0]["code"]  == "Urget_Push_Infor")):
-		openapi.post("/v1.0/iot-03/devices/62480723f4cfa27f811c/commands", {"commands": [{"code": "switch_led", "value": True}]})
+		print("Triggering!")
+		openapi.post("/v1.0/iot-03/devices/d78da503444a411f41lwi3/commands", {"commands": [{"code": "switch_1", "value": True}]})
 
 confFile = "conf.json"
 
